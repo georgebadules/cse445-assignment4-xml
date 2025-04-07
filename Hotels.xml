@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Hotel> <!-- root element name wrong -->
+<Hotel> 
   <Hotel Rating="4.2">
-    <!-- remove required Name element -->
+
     <Phone>480‑968‑8885</Phone><Phone>800‑937‑8461</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>11</Number><Street>E 7th St</Street>
@@ -11,7 +11,7 @@
 
   <Hotel Rating="4.3">
     <Name>Hilton Garden Inn Phoenix Downtown</Name>
-    <!-- missing phone element -->
+
     <Address NearestAirport="Sky Harbor">
       <Number>15</Number><Street>E Monroe St</Street>
       <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
@@ -21,15 +21,15 @@
   <Hotel Rating="4.4">
     <Name>Sheraton Grand Phoenix</Name>
     <Phone>602‑262‑2500</Phone>
-    <!-- Address not closed -->
+
     <Address NearestAirport=\"Sky Harbor\">
       <Number>340</Number><Street>N 3rd St</Street>
       <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
-    <!-- missing </Address> -->
+
   </Hotel>
 
   <Hotel Rating=\"3.9\">
-    <!-- duplicate Name elements -->
+
     <Name>Graduate Tempe</Name>
     <Name>Tempe Graduate Hotel</Name>
     <Phone>480‑967‑9431</Phone>
