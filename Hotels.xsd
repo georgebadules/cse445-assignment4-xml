@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ASU CSE445 – Assignment 4 schema. Namespace & form defaults now mirror professor's sample (Courses.xsd). -->
 <xsd:schema
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns="http://venus.sod.asu.edu/WSRepository/xml"
@@ -7,17 +6,17 @@
     elementFormDefault="qualified"
     attributeFormDefault="unqualified">
 
-  <!-- Root collection element -->
+
   <xsd:element name="Hotels" type="HotelsType"/>
 
-  <!-- HotelsType: sequence of Hotel elements -->
+
   <xsd:complexType name="HotelsType">
     <xsd:sequence>
       <xsd:element name="Hotel" type="HotelType" minOccurs="1" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
 
-  <!-- HotelType: Name, one‑or‑more Phone, Address; optional Rating attribute -->
+
   <xsd:complexType name="HotelType">
     <xsd:sequence>
       <xsd:element name="Name" type="xsd:string"/>
@@ -27,7 +26,7 @@
     <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
   </xsd:complexType>
 
-  <!-- AddressType: holds street address parts; required NearstAirport attribute -->
+
   <xsd:complexType name="AddressType">
     <xsd:sequence>
       <xsd:element name="Number" type="xsd:string"/>
@@ -39,7 +38,7 @@
     <xsd:attribute name="NearstAirport" type="xsd:string" use="required"/>
   </xsd:complexType>
 
-  <!-- PhoneType: pattern ###-###-#### (US 10‑digit) -->
+
   <xsd:simpleType name="PhoneType">
     <xsd:restriction base="xsd:string">
       <xsd:pattern value="\d{3}-\d{3}-\d{4}"/>
