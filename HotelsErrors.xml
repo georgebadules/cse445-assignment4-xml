@@ -1,37 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Hotel> <!-- root element name wrong -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Injected faults for grading -->
+<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="Hotels.xsd">
+  <!-- (1) Wrong root element name (Hotel vs Hotels) -->
+
   <Hotel Rating="4.2">
-    <!-- remove required Name element -->
-    <Phone>480‑968‑8885</Phone><Phone>800‑937‑8461</Phone>
-    <Address NearstAirport="Sky Harbor">
-      <Number>11</Number><Street>E 7th St</Street>
-      <City>Tempe</City><State>AZ</State><Zip>85281</Zip>
-    </Address>
-  </Hotel>
-  <Hotel Rating="4.3">
-    <Name>Hilton Garden Inn Phoenix Downtown</Name>
-    <!-- missing phone element -->
-    <Address NearstAirport="Sky Harbor">
-      <Number>15</Number><Street>E Monroe St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
-    </Address>
-  </Hotel>
-  <Hotel Rating="4.4">
-    <Name>Sheraton Grand Phoenix</Name>
-    <Phone>602‑262‑2500</Phone>
-    <!-- Address not closed -->
-    <Address NearstAirport=\"Sky Harbor\">
-      <Number>340</Number><Street>N 3rd St</Street>
-      <City>Phoenix</City><State>AZ</State><Zip>85004</Zip>
-    <!-- missing </Address> -->
-  </Hotel>
-  <Hotel Rating=\"3.9\">
-    <!-- duplicate Name elements -->
-    <Name>Graduate Tempe</Name>
-    <Name>Tempe Graduate Hotel</Name>
-    <Phone>480‑967‑9431</Phone>
+    <!-- (5) Two Name elements provided -->
+    <Name>Faulty Westin Tempe</Name>
+    <Name>Duplicate Name</Name>
+
+    <!-- (3) Phone element intentionally missing -->
+
+    <!-- (2) Required attribute NearstAirport missing -->
     <Address>
-      <Number>225</Number><Street>E Apache Blvd</Street>
-      <City>Tempe</City><State>AZ</State><Zip>85281</Zip>
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
     </Address>
-  </Hotel>\n</Hotel>
+  </Hotel>
+
+  <!-- (4) Address element without closing tag -->
+  <Hotel Rating="4.3">
+    <Name>Faulty Hilton Garden Inn</Name>
+    <Phone>602-343-0006</Phone>
+    <Address NearstAirport="Sky Harbor">
+      <Number>15</Number>
+      <Street>E Monroe St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    <!-- missing </Address> on purpose -->
+  </Hotel>
+</Hotel>
